@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jufa - Our Instructors
+{% endblock %}
+
+{% block body %}
+
+	<section>
+		<div class="bg-[#f7f8f9] w-full text-center p-10">
+			<h2>Our Instructors</h2>
+			<a href={{ path('app_home') }}>Home</a>
+			<span class="text-secondary">
+				/ Our Instructors</span>
+		</div>
+		<div class="px-[12rem] my-24">
+			<div class="text-center">
+				<p class="text-secondary">Our Instructors</p>
+				<h2>Our Top
+					<span class="text-secondary">Instructors</span>
+				</h2>
+
+				<div class="grid grid-cols-4 grid-rows-2 mt-8">
+					{% for instructor in instructors %}
+						<a class="text-left p-0 m-0" href={{ path('app_instructor_show', {'id': instructor.id} ) }}/>
+						<div class="m-3 shadow hover:-translate-y-1 transition duration-500 overflow-hidden">
+							<div class="flex flex-col items-center">
+								<img class="object-cover" src={{ instructor.picture }} alt={{ instructor.name ~ " " ~ instructor.firstName }}/>
+							</div>
+							<div class="p-4 m-4 flex-flex-col">
+								<p class="text-xl text-left font-light">
+									<span class="text-secondary text-4xl font-bold font-title mr-1">{{ instructor.name }}</span><br>
+									{{ instructor.firstName }}
+								</p>
+								<p class="text-left mt-2 text-nightblue">{{ instructor.profession }}</p>
+								<div class="flex flex-row justify-between mt-1">
+									<div class="flex flex-row">
+										{% for star in starCounter.getStarsArray(instructor.nbStars) %}
+											<span class="mt-2">{{ include('./components/svg/star.svg.twig') }}</span>
+										{% endfor %}
+										<p class="ml-2 mt-1">({{ instructor.rating }}
+											likes)</p>
+									</div>
+									<div>
+										<button data-popover-target={{ 'social-links' ~ instructor.id }} type="button" class="bg-nightblue py-2 m-auto justify-self-end px-4 text-light font-bold rounded-full transition delay-250 hover:bg-secondary hover:text-nightblue">
+											<span class="">+</span>
+										</button>
+
+										<div data-popover id={{ 'social-links' ~ instructor.id }} role="tooltip" class="absolute z-10 invisible inline w-12 transition-opacity duration-300 rounded-lg opacity-0">
+											<button class="px-2 py-2 my-2 bg-nightblue text-light font-bold rounded-full transition delay-250 hover:bg-secondary"><img width="25" src={{ asset('build/Facebook_f_logo.png') }}/></button>
+											<button class="px-2 py-2 bg-nightblue text-light font-bold rounded-full transition delay-250 hover:bg-secondary"><img width="25" src={{ asset('build/LinkedIn_icon_circle.png') }}/></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div></div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>{% endblock %}
