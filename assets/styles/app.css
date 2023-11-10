@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/assets/fonts/Nunito-ExtraBold.ttf");
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito";
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+li {
+  color: white;
+  transition: 250ms;
+}
+
+li:hover {
+  color: rgb(30 64 175);
+}
+
+body {
+  background-color: lightgray;
+}

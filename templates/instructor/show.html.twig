@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jufa -
+	{{ instructor.name ~ instructor.firstName }}
+{% endblock %}
+
+{% block body %}
+
+	<div class="bg-[#f7f8f9] w-full text-center p-10">
+		<h2>Our Instructors</h2>
+		<a href={{ path('app_home') }}>Home</a>
+		<span class="text-secondary">
+			/ Our Instructors</span>
+	</div>
+
+	<div class="flex flex-row justify-center mt-10 mb-3">
+		<div class="my-10">
+			<h1 class="text-5xl">
+				<span class="text-secondary text-6xl">{{ instructor.name }}</span>
+				{{ instructor.firstName }}</h1>
+		</div>
+	</div>
+	<div class="grid grid-cols-2 grid-rows-1 px-[12rem] items-center gap-10">
+		<div>
+			<img class="rounded-tl-md rounded-br-md shadow-lg" src={{ instructor.picture }}/>
+		</div>
+		<div class="bg-primary p-10 rounded-md">
+			<h2 class="text-3xl text-nightblue">{{ instructor.profession }}</h2>
+			<div class="flex flex-row">
+				{% for star in starCounter.getStarsArray(instructor.nbStars) %}
+					<span class="mt-2">{{ include('./components/svg/star.svg.twig') }}</span>
+				{% endfor %}
+				<p class="ml-2 mt-1">({{ instructor.rating }}
+					likes)</p>
+			</div>
+			<div>
+				<h2 class="mt-8 mb-2">
+					Who am I ?
+				</h2>
+				<p class="font-normal leading-loose text-xl">{{ instructor.presentation }}</p>
+			</div>
+			<div>
+				<h2 class="mt-8 mb-2">Where can you find me ?</h2>
+				<div class="flex flex-row justify-around px-20">
+					<div>
+						<a href="#"><img width="50" class="bg-nightblue rounded-full px-2 py-2 transition delay-250 hover:bg-secondary hover:-translate-y-1" src={{ asset('/build/Facebook_f_logo.png') }} alt="facebook"/><p>Facebook</p></a>
+                    </div>
+					<div>
+						<a href="#"><img width="50" class="bg-nightblue rounded-full px-2 py-2 transition delay-250 hover:bg-secondary hover:-translate-y-1" src={{ asset('/build/LinkedIn_icon_circle.png') }} alt="facebook"/><p>LinkedIn</p></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,108 @@
+<div class="bg-light drop-shadow-md h-fit flex flex-row items-center font-bold text-base justify-center sticky top-0 z-50">
+	<a href={{ path('app_home') }} class="ml-7 mr-[16rem]"><img src={{ asset('build/logo.png') }} alt="logo"/></a>
+	<div class="flex flex-row items-center">
+		<ul class="p-7 flex items-center mx-auto flex-row mx-48">
+			<li class="mr-6 mt-1">
+				<a href={{ path('app_home') }} data-popover-target="popover-no-arrow1" type="button" class="text-dark font-normal flex hover:text-secondary align-middle">Home
+					<span class="mx-2 my-[9px]">{{ include('./components/svg/dropdown.svg.twig') }}</span>
+				</a>
+				<div data-popover id="popover-no-arrow1" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-150 bg-white rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+					<ul class="py-2 text-sm">
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Home Demo - One</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Home Demo - Two</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Home Demo - Three</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mr-6 mt-1">
+				<button data-popover-target="popover-no-arrow2" type="button" class="text-dark font-normal flex hover:text-secondary align-middle">Pages
+					<span class="mx-2 my-[9px]">{{ include('./components/svg/dropdown.svg.twig') }}</span>
+				</button>
+				<div data-popover id="popover-no-arrow2" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-150 bg-white rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+					<ul class="py-2 text-sm">
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">About Us</a>
+						</li>
+						<li>
+							<a href={{ path('app_instructor') }} class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Instructors</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Event</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">User</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Other</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Testimonials</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mr-6 mt-1">
+				<button data-popover-target="popover-no-arrow3" type="button" class="text-dark font-normal flex hover:text-secondary align-middle">Our Courses
+					<span class="mx-2 my-[9px]">{{ include('./components/svg/dropdown.svg.twig') }}</span>
+				</button>
+				<div data-popover id="popover-no-arrow3" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-150 bg-white rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+					<ul class="py-2 text-sm">
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Our Courses</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Courses Details</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mr-6 mt-1">
+				<button data-popover-target="popover-no-arrow4" type="button" class="text-dark font-normal flex hover:text-secondary align-middle">Shop
+					<span class="mx-2 my-[9px]">{{ include('./components/svg/dropdown.svg.twig') }}</span>
+				</button>
+				<div data-popover id="popover-no-arrow4" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-150 bg-white rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+					<ul class="py-2 text-sm">
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Product</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Cart</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Checkout</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Details</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mr-6 mt-1">
+				<button data-popover-target="popover-no-arrow5" type="button" class="text-dark font-normal flex hover:text-secondary align-middle">Blog
+					<span class="mx-2 my-[9px]">{{ include('./components/svg/dropdown.svg.twig') }}</span>
+				</button>
+				<div data-popover id="popover-no-arrow5" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-150 bg-white rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+					<ul class="py-2 text-sm">
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Blog</a>
+						</li>
+						<li>
+							<a href="#" class="block text-dark font-normal hover:text-secondary px-4 py-2 hover:bg-gray-100">Blog Details</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mr-6 mb-[2px]">
+				<a class="text-dark font-normal hover:text-secondary transition align-middle" href="#">Contact Us</a>
+			</li>
+		</ul>
+		<a href="" class="text-dark font-normal hover:text-secondary transition align-middle ml-[12rem]">Sign In</a>
+		<input type="text" placeholder="Search for..." id="default-input" class="bg-[#f7f8f9] ml-5 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-secondary ring-[0.1px] focus:ring-[0.2px] focus:border-secondary p-2.5 transition duration-150 placeholder:text-gray placeholder:font-light">
+	</div>
+</div>
