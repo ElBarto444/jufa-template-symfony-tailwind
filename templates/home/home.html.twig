@@ -1,19 +1,75 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-	<div class="container flex flex-row items-center mt-[6rem] m-auto">
-		<div class="w-[calc(47%)]">
-			<p class="font-bold text-sm mb-3 text-tertiary">----- Best Learning Platform</p>
-			<h1 class="font-title text-6xl leading-snug">The Biggest Wealth is Your
-				<span class="text-secondary">Health.</span>
-			</h1>
-			<p class="text-dark text-lg mt-3 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus. Id nisl quis arcu nulla.</p>
-			<div>
-				<button class="z-1 flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg">
-					<div class="z-10 bg-white w-fit hover:-transform-y-5"></div>Get Started
-					<span class="ml-2 pt-[3px]">{{ include('./components/svg/pen.svg.twig') }}</span>
-				</button>
+	<section>
+		<div class="container flex flex-row items-center mt-[6rem] m-auto">
+			<div class="w-[calc(47%)]">
+				<p class="font-bold text-sm mb-3 text-tertiary">----- Best Learning Platform</p>
+				<h1 class="font-title text-6xl leading-snug">The Biggest Wealth is Your
+					<span class="text-secondary">Health.</span>
+				</h1>
+				<p class="text-dark text-lg mt-3 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus. Id nisl quis arcu nulla.</p>
+				<div>
+					<button class="z-1 flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg">
+						<div class="z-10 bg-white w-fit hover:-transform-y-5"></div>Get Started
+						<span class="ml-2 pt-[3px]">{{ include('./components/svg/pen.svg.twig') }}</span>
+					</button>
+				</div>
+			</div>
+			<img width="725" class="object-contain rounded-tl-lg rounded-br-lg" src={{ asset('build/banner-img-2.jpg') }}/>
+		</div>
+	</section>
+	<section class="mt-[7rem]">
+		<div class="conatiner flex flex-row justify-center">
+			<div class="w-[calc(47%)] text-center">
+				<p class="text-nightblue">Live without stress</p>
+				<h1 class="text-5xl font-title">Helthy is the new
+					<span class="text-secondary">Lifestyle</span>
+				</h1>
 			</div>
 		</div>
-		<img width="725" class="object-contain rounded-tl-lg rounded-br-lg" src={{ asset('build/banner-img-2.jpg') }}/>
-	</div>
+		<div class="grid grid-cols-4 px-[18rem] gap-x-9 mt-[5rem]">
+			<div class="relative shadow hover:-translate-y-1 transition duration-500 shadow-lg p-7 rounded-tl-lg rounded br-lg">
+				<div class="z-0">
+					<img class="mb-3" src={{ asset('/build/icon-5.png') }}/>
+					<img class="absolute top-2 right-2" src={{ asset('/build/icon-shape-5.png') }}/>
+				</div>
+				<div class="z-10">
+					<h3 class="text-2xl my-3 z-10">Nutrition Strategies</h3>
+					<p class="text-dark mb-3">Lorem ipsum dolor sit amet costurr adipiscing elit sed do eiusmo Quis ipsum suspendisse ultrices</p>
+					<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
+						Get started today
+					</a>
+				</div>
+			</div>
+			<div class="relative shadow hover:-translate-y-1 transition duration-500 shadow-lg p-7 rounded-tl-lg rounded br-lg">
+				<img class="mb-3" src={{ asset('/build/icon-6.png') }}/>
+				<img class="absolute top-2 right-2 -z-2" src={{ asset('/build/icon-shape-6.png') }}/>
+				<h3 class="text-2xl my-3 z-10">Workout Routines</h3>
+				<p class="text-dark mb-3">Lorem ipsum dolor sit amet costurr adipiscing elit sed do eiusmo Quis ipsum suspendisse ultrices</p>
+				<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
+					Get started today
+				</a>
+			</div>
+			<div class="relative shadow hover:-translate-y-1 transition duration-500 shadow-lg p-7 rounded-tl-lg rounded br-lg">
+				<img class="mb-3" src={{ asset('/build/icon-7.png') }}/>
+				<img class="absolute top-2 right-2 z-0" src={{ asset('/build/icon-shape-5.png') }}/>
+				<h3 class="text-2xl my-3 z-5">Support
+					{{ '&' | escape }}
+					Motivation</h3>
+				<p class="text-dark mb-3">Lorem ipsum dolor sit amet costurr adipiscing elit sed do eiusmo Quis ipsum suspendisse ultrices</p>
+				<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
+					Get started today
+				</a>
+			</div>
+			<div class="relative shadow hover:-translate-y-1 transition duration-500 shadow-lg p-7 rounded-tl-lg rounded br-lg">
+				<img class="mb-3" src={{ asset('/build/icon-8.png') }}/>
+				<img class="absolute top-2 right-2 z-0" src={{ asset('/build/icon-shape-6.png') }}/>
+				<h3 class="text-2xl my-3 z-5">Personal Program</h3>
+				<p class="text-dark mb-3">Lorem ipsum dolor sit amet costurr adipiscing elit sed do eiusmo Quis ipsum suspendisse ultrices</p>
+				<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
+					Get started today
+				</a>
+			</div>
+		</div>
+	</section>
 {% endblock %}
