@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 	<section>
-		<div class="container flex flex-row items-center mt-[6rem] m-auto">
+		<div class="absolute bg-primary w-full  h-[85%] z-0  inset-x-0 top-0"></div>
+		<div class="container relative flex flex-row items-center mt-[6rem] m-auto z-2">
 			<div class="w-[calc(47%)]">
 				<p class="font-bold text-sm mb-3 text-tertiary">----- Best Learning Platform</p>
 				<h1 class="font-title text-6xl leading-snug">The Biggest Wealth is Your
@@ -9,9 +10,12 @@
 				</h1>
 				<p class="text-dark text-lg mt-3 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis placerat arcu nibh sed placerat elementum. Urna eu et purus et mi sit rhoncus. Id nisl quis arcu nulla.</p>
 				<div>
-					<button class="z-1 flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg">
-						<div class="z-10 bg-white w-fit hover:-transform-y-5"></div>Get Started
-						<span class="ml-2 pt-[3px]">{{ include('./components/svg/pen.svg.twig') }}</span>
+					<button class="get-started hover:text-nightblue transition duration-300 hover:fill-nightblue flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg relative overflow-hidden z-1">
+						<div class="flex flex-row z-20">
+							Get Started
+							<span class="ml-2 pt-[3px] z-20">{{ include('./components/svg/pen.svg.twig') }}</span>
+						</div>
+						<div class="button-block absolute transition-all px-[4.85rem] py-[1.5rem] inset-x-0 -top-16 hover:inset-x-0 hover:top-0 z-10 bg-secondary w-fit hover:-transform-y-5"></div>
 					</button>
 				</div>
 			</div>
@@ -21,7 +25,7 @@
 	<section class="mt-[7rem]">
 		<div class="conatiner flex flex-row justify-center">
 			<div class="w-[calc(47%)] text-center">
-				<p class="text-nightblue">Live without stress</p>
+				<p class="text-nightblue mb-[1rem]">Live without stress</p>
 				<h1 class="text-5xl font-title">Helthy is the new
 					<span class="text-secondary">Lifestyle</span>
 				</h1>

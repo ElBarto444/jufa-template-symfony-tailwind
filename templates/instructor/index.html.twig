@@ -44,8 +44,7 @@
 										<button data-popover-target={{ 'social-links' ~ instructor.id }} type="button" class="bg-nightblue py-2 m-auto justify-self-end px-4 text-light font-bold rounded-full transition delay-250 hover:bg-secondary hover:text-nightblue">
 											<span class="">+</span>
 										</button>
-
-										<div data-popover id={{ 'social-links' ~ instructor.id }} role="tooltip" class="absolute z-10 invisible inline w-12 transition-opacity duration-300 rounded-lg opacity-0">
+										<div data-popover id={{ 'social-links' ~ instructor.id }} role="tooltip" class="absolute z-10 transition-opacity duration-300 invisible inline w-12 rounded-lg opacity-0">
 											<button class="px-2 py-2 my-2 bg-nightblue text-light font-bold rounded-full transition delay-250 hover:bg-secondary"><img width="25" src={{ asset('build/Facebook_f_logo.png') }}/></button>
 											<button class="px-2 py-2 bg-nightblue text-light font-bold rounded-full transition delay-250 hover:bg-secondary"><img width="25" src={{ asset('build/LinkedIn_icon_circle.png') }}/></button>
 										</div>
