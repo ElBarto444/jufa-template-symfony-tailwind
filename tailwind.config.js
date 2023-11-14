@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         title: ["Nunito, Bold", "sans-serif"],
-        // text: ["Roboto", "sans-serif"],
+        "title-medium": ["Nunito", "sans-serif"],
       },
     },
   },

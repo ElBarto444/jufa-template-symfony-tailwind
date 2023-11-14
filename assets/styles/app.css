@@ -7,6 +7,11 @@
   src: url("/assets/fonts/Nunito-ExtraBold.ttf");
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url('/assets/fonts/Nunito-Regular.ttf');
+}
+
 h1,
 h2,
 h3 {
@@ -38,7 +43,19 @@ body {
   }
 
   .pen-icon {
-    transition-duration: 100ms;
+    transition: ease-in-out 50ms;
     fill: #16056b;
+  }
+}
+
+.navbar-elem {
+  opacity: 0;
+  transition: ease-in-out;
+  transition-duration: 350ms;
+}
+
+.navbar-button:hover {
+  .navbar-elem {
+    opacity: 1;
   }
 }

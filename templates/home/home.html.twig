@@ -13,7 +13,7 @@
 					<button class="get-started hover:text-nightblue transition duration-300 hover:fill-nightblue flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg relative overflow-hidden z-1">
 						<div class="flex flex-row z-20">
 							Get Started
-							<span class="ml-2 pt-[3px] z-20">{{ include('./components/svg/pen.svg.twig') }}</span>
+							<span class="ml-2 pt-[3px] z-20 transition">{{ include('./components/svg/pen.svg.twig') }}</span>
 						</div>
 						<div class="button-block absolute transition-all px-[4.85rem] py-[1.5rem] inset-x-0 -top-16 hover:inset-x-0 hover:top-0 z-10 bg-secondary w-fit hover:-transform-y-5"></div>
 					</button>
@@ -26,7 +26,7 @@
 		<div class="conatiner flex flex-row justify-center">
 			<div class="w-[calc(47%)] text-center">
 				<p class="text-nightblue mb-[1rem]">Live without stress</p>
-				<h1 class="text-5xl font-title">Helthy is the new
+				<h1 class="text-5xl font-title">Healthy is the new
 					<span class="text-secondary">Lifestyle</span>
 				</h1>
 			</div>
@@ -62,7 +62,8 @@
 					Motivation</h3>
 				<p class="text-dark mb-3">Lorem ipsum dolor sit amet costurr adipiscing elit sed do eiusmo Quis ipsum suspendisse ultrices</p>
 				<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
-					Get started today
+					<div class="flex flex-row">Get started today<span class="ml-2">{{ include('./components/svg/arrow-right.svg.twig') }}</span>
+					</div>
 				</a>
 			</div>
 			<div class="relative shadow hover:-translate-y-1 transition duration-500 shadow-lg p-7 rounded-tl-lg rounded br-lg">
@@ -73,6 +74,28 @@
 				<a href="#" class="text-nightblue transition-all duration-500 hover:text-secondary hover:tracking-widest">
 					Get started today
 				</a>
+			</div>
+		</div>
+	</section>
+	<section>
+
+		<div class="container relative flex flex-row items-center mt-[6rem] m-auto z-2"></div>
+		<div class="absolute bg-primary w-full  h-[80%] z-0  inset-x-0 top-50">
+			<div class="grid grid-cols-2 items-center gap-x-12 px-[12rem] py-[5rem]">
+				<div class="grid justify-items-center">
+					<div class="place-self-end mb-9">
+						<img src={{ asset('build/about-img-3.jpg') }}/>
+					</div>
+					<div class="place-self-start">
+						<img src={{ asset('build/about-img-4.jpg') }}/>
+					</div>
+				</div>
+				<div class="row-span-2">
+					<p class="text-nightblue text-sm mb-4">About Us</p>
+					<h1 class="text-5xl font-title-medium">Smart Tutoring Program for Success People</h1>
+					<p class="text-dark my-7">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas ut labore et dolore magna aliqua.</p>
+					<p class="text-dark">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+				</div>
 			</div>
 		</div>
 	</section>
