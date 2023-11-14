@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Nunito";
-  src: url('/assets/fonts/Nunito-Regular.ttf');
+  src: url("/assets/fonts/Nunito-Regular.ttf");
 }
 
 h1,
@@ -48,14 +48,13 @@ body {
   }
 }
 
-.navbar-elem {
-  opacity: 0;
-  transition: ease-in-out;
-  transition-duration: 350ms;
+.play-button {
+  transition: ease-in-out 350ms;
 }
 
-.navbar-button:hover {
-  .navbar-elem {
-    opacity: 1;
+.video-div:hover {
+  .play-button {
+    transform: scale(1.3);
+    fill: #16056b;
   }
 }

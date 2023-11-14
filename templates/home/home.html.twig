@@ -25,7 +25,10 @@
 	<section class="mt-[7rem]">
 		<div class="conatiner flex flex-row justify-center">
 			<div class="w-[calc(47%)] text-center">
-				<p class="text-nightblue mb-[1rem]">Live without stress</p>
+				<div class="flex flex-row justify-center items-center mb-4">
+					<img class="mr-2" src={{ asset('/build/flower.png') }}/>
+					<p class="text-nightblue">Live without stress</p>
+				</div>
 				<h1 class="text-5xl font-title">Healthy is the new
 					<span class="text-secondary">Lifestyle</span>
 				</h1>
@@ -80,21 +83,40 @@
 	<section>
 
 		<div class="container relative flex flex-row items-center mt-[6rem] m-auto z-2"></div>
-		<div class="absolute bg-primary w-full  h-[80%] z-0  inset-x-0 top-50">
+		<div class="absolute bg-primary w-full h-[80%] z-0  inset-x-0 top-50">
 			<div class="grid grid-cols-2 items-center gap-x-12 px-[12rem] py-[5rem]">
 				<div class="grid justify-items-center">
-					<div class="place-self-end mb-9">
+					<div class="place-self-end mb-9 relative">
+						<div class="shadow-lg absolute flex flex-row m-auto inset-y-5 -left-44 p-8 h-[30%] rounded-br-lg rounded-tl-lg bg-light">
+							<img class="mr-3 pb-2 h-[35px]" src={{ asset('/build/yoga.png') }}/>
+							<span class="font-bold m-auto text-dark align-middle">Professional Trainer</span>
+						</div>
 						<img src={{ asset('build/about-img-3.jpg') }}/>
 					</div>
-					<div class="place-self-start">
+					<div class="place-self-start relative">
+						<a href="https://www.youtube.com/watch?v=zv5bpfxJ2xE" target="_blank" rel="noreferrer" class="video-div shadow-lg flex flex-row justify-center absolute flex flex-row m-auto inset-y-5 -right-44 p-8 h-[30%] rounded-br-lg rounded-tl-lg bg-light">
+							<span class="flex self-center">{{ include('./components/svg/play-button.svg.twig') }}</span>
+							<p class="font-bold m-auto text-secondary align-middle">Watch Video</p>
+						</a>
 						<img src={{ asset('build/about-img-4.jpg') }}/>
 					</div>
 				</div>
 				<div class="row-span-2">
-					<p class="text-nightblue text-sm mb-4">About Us</p>
+					<div class="flex flex-row items-center">
+						<img class="mr-2 mb-4" src={{ asset('/build/flower.png') }}/><p class="text-nightblue font-bold text-sm mb-4">About Us</p>
+					</div>
 					<h1 class="text-5xl font-title-medium">Smart Tutoring Program for Success People</h1>
 					<p class="text-dark my-7">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas ut labore et dolore magna aliqua.</p>
 					<p class="text-dark">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+					<div>
+						<button class="get-started hover:text-nightblue transition duration-300 hover:fill-nightblue flex mt-8 py-3 px-5 text-light bg-tertiary rounded-tl-lg rounded-br-lg relative overflow-hidden z-1">
+							<div class="flex flex-row z-20">
+								Join For Feature
+								<div class="ml-2 pt-[3px] z-20 transition">{{ include('./components/svg/arrow-right.svg.twig') }}</div>
+							</div>
+							<div class="button-block absolute transition-all px-[5.7rem] py-[1.5rem] inset-x-0 -top-16 hover:inset-x-0 hover:top-0 z-10 bg-secondary w-fit hover:-transform-y-5"></div>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
