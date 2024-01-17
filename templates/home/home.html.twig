@@ -27,7 +27,7 @@
 			<div class="w-[calc(47%)] text-center">
 				<div class="flex flex-row justify-center items-center mb-4">
 					<img class="mr-2" src={{ asset('/build/flower.png') }}/>
-					<p class="text-nightblue">Live without stress</p>
+					<p class="text-nightblue font-bold">Live without stress</p>
 				</div>
 				<h1 class="text-5xl font-title">Healthy is the new
 					<span class="text-secondary">Lifestyle</span>
@@ -162,6 +162,64 @@
 					</a>
 				</div>
 				<img class="rounded-br-lg rounded-tl-lg" src={{ asset('/build/work-3.jpg') }}/>
+			</div>
+		</div>
+	</section>
+	<section class="my-[5rem] bg-primary">
+		<div class="flex flex-row justify-center py-[5rem]">
+			<div class="w-[calc(47%)] text-center">
+				<div class="flex flex-row justify-center items-center mb-4">
+					<img class="mr-2" src={{ asset('/build/flower.png') }}/>
+					<p class="text-nightblue font-bold">Online Courses</p>
+				</div>
+				<h1 class="text-5xl font-title">Explore featured
+					<span class="text-secondary">Courses</span>
+				</h1>
+			</div>
+		</div>
+		<div class="flex flex-col px-[12rem]">
+			<div class="grid grid-cols-3 grid-rows-2 gap-8">
+				{% for course in courses %}
+					<a href="#">
+						<div class="card flex flex-col bg-white shadow-lg w-90 rounded-tl-lg rounded-br-lg transition duration-[350ms] hover:-translate-y-2">
+							<div class="relative">
+								<img class="rounded-tl-lg" width="500" src={{ course.coursePicture }}/>
+								<span class="absolute bottom-5 left-5 bg-nightblue text-white px-3 py-2 rounded-lg">{{ course.price }}€</span>
+							</div>
+							<div class="p-6">
+								<div class="flex justify-between gap-5">
+									<div class="flex flex-row align-center">
+										<img class="rounded-3xl mr-2" width="30" src={{ course.instructor.picture }}/>
+										<p class="text-dark">{{ course.instructor.firstName ~ " " ~ course.instructor.name }}</p>
+									</div>
+									<div class="flex flex-row">
+										{% for star in starCounter.getStarsArray(course.instructor.nbStars) %}
+											<span class="mt-1">{{ include('./components/svg/star.svg.twig') }}</span>
+										{% endfor %}
+										<p class="ml-1">({{ course.instructor.rating }})</p>
+									</div>
+								</div>
+								<div class="my-5">
+									<h1 class="text-dark text-xl font-bold transition duration-[350ms]">{{ course.title }}</h1>
+								</div>
+								<div class="border"></div>
+								<div class="my-5 text-dark">
+									<div class="flex flex-row">
+										{{ include('./components/svg/clock-icon.svg.twig') }}
+										<p>{{ course.duration }}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+			<div class="flex flex-row justify-center mt-8 mb-20">
+				<div class="flex flex-row text-dark">
+					<p>Begin now !
+						<a href="#" class="text-secondary">View all courses</a>
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
