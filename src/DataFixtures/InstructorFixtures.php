@@ -65,6 +65,8 @@ class InstructorFixtures extends Fixture
 
             $manager->persist($instructor);
             $manager->flush();
+
+            $this->addReference('instructor_' . $i, $instructor);
         }
     }
 }

@@ -71,6 +71,12 @@ body {
   }
 }
 
+.card:hover {
+  h1 {
+    color: rgb(252 148 24);
+  }
+}
+
 .video-div:hover {
   .play-button {
     transform: scale(1.3);
