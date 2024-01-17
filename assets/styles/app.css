@@ -35,7 +35,20 @@ body {
   background-color: lightgray;
 }
 
-.get-started:hover {
+#started .get-started:hover {
+  .button-block {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+  }
+
+  .pen-icon {
+    transition: ease-in-out 50ms;
+    fill: #16056b;
+  }
+}
+
+#feature .get-started:hover {
   .button-block {
     left: 0px;
     right: 0px;
@@ -50,6 +63,12 @@ body {
 
 .play-button {
   transition: ease-in-out 350ms;
+}
+
+.work-caption:hover {
+  h1 {
+    color: rgb(252 148 24);
+  }
 }
 
 .video-div:hover {
